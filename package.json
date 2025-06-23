@@ -1,0 +1,16 @@
+{
+  "name": "apple-style-memory-game",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Jogo da memória minimalista com design inspirado na Apple",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "keywords": ["memory-game", "apple-design", "minimalist", "javascript"]
+}
