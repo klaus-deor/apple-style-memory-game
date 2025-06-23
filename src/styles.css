@@ -107,9 +107,12 @@ body {
 .game-board {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   gap: 16px;
   max-width: 480px;
+  min-height: 480px;
   margin: 0 auto;
+  width: 100%;
 }
 
 /* Cards */
@@ -123,6 +126,15 @@ body {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(10px);
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  min-height: 100px;
+  width: 100%;
+}
+
+.memory-card.card-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .memory-card::before {
@@ -151,7 +163,6 @@ body {
 .memory-card.flipped {
   background: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.3);
-  transform: rotateY(180deg);
 }
 
 .memory-card.matched {
@@ -315,6 +326,7 @@ body {
   
   .game-board {
     gap: 12px;
+    min-height: 400px;
   }
   
   .card-content {
@@ -330,10 +342,12 @@ body {
 @media (max-width: 480px) {
   .game-board {
     gap: 8px;
+    min-height: 300px;
   }
   
   .memory-card {
     border-radius: 12px;
+    min-height: 70px;
   }
   
   .card-content {
